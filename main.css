@@ -45,24 +45,24 @@ body{
 }
 
 .header > .navbar > .title{
-    font-size: 60px;
+    font-size: 5rem;
     color: var(--primary-color);
 }
 
 .display-big{
-    font-size: 80px;
+    font-size: 6rem;
     color: white;
     margin-top: 10%;
 }
 
 .display-small{
-    font-size: 40px;
+    font-size: 3rem;
     color: white;
     margin-bottom: auto;
 }
 
 .display-med{
-    font-size: 40px;
+    font-size: 2.8rem;
     color: white;
     text-align: center;
     display: grid;
@@ -70,7 +70,7 @@ body{
 }
 
 .display-med > .sign-up-btn{
-    font-size: 20px;
+    font-size: 1.3rem;
     width: 120px;
     padding: 8px 15px;
     margin-top: 8px;
@@ -96,12 +96,12 @@ body{
 }
 
 .display-info > .text > .text-title{
-    font-size: 50px;
+    font-size: 2.5rem;
     margin-bottom: 5px;
 }
 
 .display-info > .text > .text-content{
-    font-size: 30px;
+    font-size: 1.5rem;
 }
 
 .display-info > img{
