@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+.primary{
+    color: var(--primary-color);
+}
+
 body{
     background-color: #3b3b3b;
     font-family: 'Ubuntu', sans-serif;
@@ -29,7 +33,8 @@ body{
 }
 
 .logo{
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 700;
 }
 
 .user{
@@ -74,7 +79,7 @@ body{
 }
 
 .side-actions > i{
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 35px;
     cursor: pointer;
 }
@@ -100,17 +105,46 @@ body{
     position: relative;
     max-width: 90vw;
     top: 10vh;
-    left: 7vw;
+    left: 8vw;
     display: grid;
     place-items: center;
-    column-gap: 20px;
     row-gap: 10px;
-    grid-template-columns: repeat(3, calc(90vw/3));
+    grid-template-columns: repeat(4, calc(90vw/4));
+    grid-template-rows: repeat(3, calc(100vw/3));
 }
 
 .display-block{
-    margin: 20px 0;
-    width: 440px;
-    height: 600px;
+    position: relative;
+    margin: 5px 0;
+    width: 90%;
+    height: 95%;
+    background-size: cover;
+    border: 2px solid black;
     background-color: white;
+    overflow: hidden;
+}
+
+.movie-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    vertical-align: baseline;
+    height: 100%;
+    width: 100%;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-block:hover > .movie-info{
+    transform: translateY(0);
 }
