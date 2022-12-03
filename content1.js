@@ -16,8 +16,6 @@ window.addEventListener("resize", () => {
     }
 });
 
-
-
 function toggleMenu(){
     let menubtn = document.getElementsByClassName("content-menu")[0]
 
@@ -51,11 +49,34 @@ function checkSize(){
 }
 
 function callSV(){
-    let data = {pageNumber: 12}
+    let fileName = window.location.href.split("/").pop();
+    let data = {}
+    switch (fileName){
+        case "action1.html":
+            data = {pageNumber: 28}
+            break;
+        case "animation1.html":
+            data = {pageNumber: 18}
+            break;
+        case "comedy1.html":
+            data = {pageNumber: 36}
+            break;
+        case "content1.html":
+            data = {pageNumber: 12}
+            break;
+        case "horror1.html":
+            data = {pageNumber: 27}
+            break;
+        default:
+            data = {pageNumber: 12}
+            console.log("error in calling server")
+            break;
+    }
     fetch("https://mymovieshub.vercel.app/searchByGenre", {
         method: 'POST',
-        body: JSON.stringify(data)
+        body: data
     }).then(response => {
+        console.log(response)
         return response.json()
     }).then( data => {
         movieData = data.filter((currentValue, index) => {
@@ -84,5 +105,16 @@ function callSV(){
     }).catch(error => {
         console.log(error)
     })
+}
 
+function gotoPage(event){
+    let temp = "content1.html"
+    if(event.target.innerHTML !== "" && event.target.innerHTML !== "Home"){
+        temp = event.target.innerHTML.toLowerCase() + "1.html"
+    }else if(event.target.innerHTML === "home"){
+        temp = "content1.html"
+    }
+    console.log(temp)
+    window.location.href = "./"+temp;
+    event.stopPropagation();
 }

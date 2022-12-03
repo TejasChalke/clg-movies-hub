@@ -20,7 +20,7 @@
     }
     
     body{
-        background-color: #3b3b3b;
+        background-color: black;
         font-family: 'Ubuntu', sans-serif;
     }
     
@@ -72,7 +72,7 @@
         display: none;
         top: 63px;
         right: -20px;
-        background: black;
+        background: rgb(255, 255, 255);
         transform: translateX(100%);
         transition-property: all;
         transition-duration: 300ms;
@@ -90,12 +90,12 @@
     }
 
     li{
-        color: white;
+        color: black;
         height: 5vh;
         width: auto;
         margin-top: 10px;
         padding: 0 15px;
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid rgb(0, 0, 0);
         font-size: 1.2rem;
     }
 
@@ -120,8 +120,8 @@
         height: 95%;
         background-size: cover;
         background-position: center;
-        border: 2px solid black;
-        background-color: white;
+        border: 2px solid rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
         overflow: hidden;
     }
     
@@ -158,7 +158,7 @@
     }
     
     body{
-        background-color: #3b3b3b;
+        background-color: black;
         font-family: 'Ubuntu', sans-serif;
     }
     
@@ -209,7 +209,7 @@
         position: absolute;
         top: 73px;
         right: -40px;
-        background: black;
+        background: white;
         transform: translateX(100%);
         transition-property: all;
         transition-duration: 300ms;
@@ -227,13 +227,14 @@
     }
 
     li{
-        color: white;
+        color: black;
         height: 5vh;
         width: auto;
         margin-top: 10px;
         padding: 0 20px;
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid black;
         font-size: 1.5rem;
+        user-select: none;
     }
 
     /* End of navbar */
@@ -257,8 +258,8 @@
         height: 95%;
         background-size: cover;
         background-position: center;
-        border: 2px solid black;
-        background-color: white;
+        border: 2px solid rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
         overflow: hidden;
     }
     
@@ -296,7 +297,7 @@
     }
     
     body{
-        background-color: #3b3b3b;
+        background-color: black;
         font-family: 'Ubuntu', sans-serif;
     }
     
@@ -349,7 +350,7 @@
         top: 10vh;
         height: 90vh;
         width: 7vw;
-        background-color: black;
+        background-color: var(--bg-color);
     }
     
     .side-actions{
@@ -402,8 +403,8 @@
         height: 95%;
         background-size: cover;
         background-position: center;
-        border: 2px solid black;
-        background-color: white;
+        border: 2px solid rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
         overflow: hidden;
     }
     
