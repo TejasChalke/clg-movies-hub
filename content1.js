@@ -1,9 +1,57 @@
+const mediaQuerySmall = window.matchMedia('(max-width: 600px)'), mediaQueryMed = window.matchMedia('(max-width: 1200px)'), mediaQueryLarge = window.matchMedia('(min-width: 1201px)')
 let movieData = []
 let mainContainer= document.getElementsByClassName("main-content")[0]
 
+document.addEventListener("loadstart",  checkSize());
+
+document.addEventListener('DOMContentLoaded', callSV(), false);
+
+window.addEventListener("resize", checkSize());
+
+window.addEventListener("resize", () => {
+    if(mediaQueryLarge.matches){
+        document.getElementsByClassName("sidebar")[0].classList.remove("deactive")
+    }else{
+        document.getElementsByClassName("sidebar")[0].classList.add("deactive")
+    }
+});
+
+
+
+function toggleMenu(){
+    let menubtn = document.getElementsByClassName("content-menu")[0]
+
+    if(mediaQueryLarge.matches){
+        document.getElementById("menu-1").classList.add("deactive");
+        document.getElementById("menu-2").classList.remove("deactive");
+    }else{
+        document.getElementById("menu-1").classList.remove("deactive");
+        document.getElementById("menu-2").classList.add("deactive");
+    }
+
+    if(menubtn.getAttribute("data-status") === "active"){
+        menubtn.setAttribute("data-status", "deactive")
+        setTimeout(() => {
+            menubtn.style.display = "none"
+        }, 300);
+    }else{
+        menubtn.style.display = "block"
+        setTimeout(() => { 
+            menubtn.setAttribute("data-status", "active")
+        }, 100);
+    }
+}
+
+function checkSize(){
+    if(mediaQuerySmall.matches || mediaQueryMed.matches){
+        document.getElementsByClassName("sidebar")[0].classList.add("deactive")
+    }else{
+        document.getElementsByClassName("sidebar")[0].classList.remove("deactive")
+    }
+}
+
 function callSV(){
     let data = {pageNumber: 12}
-    console.log("hello")
     fetch("https://mymovieshub.vercel.app/searchByGenre", {
         method: 'POST',
         body: JSON.stringify(data)
@@ -16,7 +64,6 @@ function callSV(){
             }
         });
         
-        console.log(movieData)
         mainContainer.innerHTML= "";
         movieData.forEach(data => {
             let genres= ""
@@ -39,40 +86,3 @@ function callSV(){
     })
 
 }
-
-document.addEventListener('DOMContentLoaded', callSV(), false);
-
-
-// genres
-// : 
-// Array(3)
-// 0
-// : 
-// "Action"
-// 1
-// : 
-// "Fantasy"
-// 2
-// : 
-// "Science Fiction"
-// length
-// : 
-// 3
-// [[Prototype]]
-// : 
-// Array(0)
-// posterImage
-// : 
-// "https://image.tmdb.org/t/p/w500/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg"
-// release_date
-// : 
-// "2022-10-19"
-// synopsis
-// : 
-// "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world."
-// thumbnail
-// : 
-// "https://image.tmdb.org/t/p/w500/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"
-// title
-// : 
-// "Black Adam"

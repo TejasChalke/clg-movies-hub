@@ -17,21 +17,32 @@
 <body>
     <nav class="navbar">
         <div class="logo">Movies Hub</div>
-        <div class="user">
+        <div class="user" onclick="toggleMenu()">
             <div class="user-name">Tejas</div>
             <i class="fa-solid fa-user"></i>
+            <div class="content-menu" data-status="deactive" >
+                <ul class="menu-items" id="menu-1">
+                    <li class="meu-item">Home</li>
+                    <li class="meu-item">Action</li>
+                    <li class="meu-item">Adventure</li>
+                    <li class="meu-item">Animation</li>
+                    <li class="meu-item">Comedy</li>
+                    <li class="menu-item">Log Out</li>
+                </ul>
+                <ul class="menu-items" id="menu-2">
+                    <li class="menu-item">Log Out</li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="sidebar">
         <div class="side-actions">
             <i class="fa-solid fa-house" title="Home"></i>
-            <i class="fa-solid fa-film" title="Movies"></i>
-            <i class="fa-solid fa-tv" title="TV Shows"></i>
             <div class="genres">
                 <div class="genre">Action</div>
                 <div class="genre">Adventure</div>
+                <div class="genre">Animation</div>
                 <div class="genre">Comedy</div>
-                <div class="genre">Horror</div>
             </div>
         </div>
     </div>

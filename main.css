@@ -9,105 +9,353 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: var(--bg-color);
-    font-family: 'Ubuntu', sans-serif;
+.deactive{
+    display: none !important;
 }
 
-.btn{
-    cursor: pointer;
-    background-color: var(--primary-color);
-    border-radius: 5px;
+/* small devices */
+@media screen and (max-width: 600px) {  
+
+    body{
+        background-color: var(--bg-color);
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .btn{
+        cursor: pointer;
+        background-color: var(--primary-color);
+        border-radius: 5px;
+        height: 35px;
+        width: 90px;
+        color: white;
+    }
+
+    .header{
+        width: 100vw;
+        height: 80vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("./images/wallpaperflare.com_wallpaper.jpg");
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header > .navbar{
+        width: 100vw;
+        padding: 10px 30px;
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .index-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    .index-menu > .login-btn{
+        font-size: 1rem;
+        display: grid;
+        place-items: center;
+        margin-right: 5px;
+    }
+
+    .index-menu > .index-sign-up-btn{
+        font-size: 1rem;
+        display: grid;
+        place-items: center;
+    }
+
+    .header > .navbar > .title{
+        font-size: 3rem;
+        word-wrap: normal;
+        color: var(--primary-color);
+    }
+
+    .display-big{
+        width: 90%;
+        text-align: center;
+        font-size: 4rem;
+        color: white;
+        margin-top: 10%;
+    }
+
+    .display-small{
+        font-size: 2.5rem;
+        width: 90%;
+        text-align: center;
+        color: white;
+        margin-bottom: auto;
+        margin-top: 50px;
+    }
+
+    .display-med{
+        font-size: 2.8rem;
+        color: white;
+        text-align: center;
+        display: none;
+        place-items: center;
+    }
+
+
+
+    /* End of head */
+
+    .display-info{
+        margin: 10px 0;
+        padding: 0 20px;
+        background-color: black;
+        color: white;
+        width: 100vw;
+        height: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .display-info > .text{
+        width: 40%;
+        margin: 0 40px;
+    }
+
+    .display-info > .text > .text-title{
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+
+    .display-info > .text > .text-content{
+        font-size: 1rem;
+    }
+
+    .display-info > img{
+        height: 40%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+        filter: brightness(80%);
+    }
 }
 
-.header{
-    width: 100vw;
-    height: 80vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("./images/wallpaperflare.com_wallpaper.jpg");
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+/* medium screens */
+@media  screen and (min-width:601px) { 
+
+    body{
+        background-color: var(--bg-color);
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .btn{
+        cursor: pointer;
+        background-color: var(--primary-color);
+        border-radius: 5px;
+    }
+    
+    .header{
+        width: 100vw;
+        height: 80vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("./images/wallpaperflare.com_wallpaper.jpg");
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header > .navbar{
+        width: 100vw;
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .login-btn{
+        padding: 8px 18px;
+        font-size: 1.3rem;
+        color: white;
+    }
+    
+    .header > .navbar > .title{
+        font-size: 5rem;
+        color: var(--primary-color);
+    }
+    
+    .display-big{
+        font-size: 5rem;
+        text-align: center;
+        color: white;
+        margin-top: 10%;
+    }
+    
+    .display-small{
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: auto;
+        margin-top: 10px;
+    }
+    
+    .display-med{
+        font-size: 2.8rem;
+        color: white;
+        text-align: center;
+        display: grid;
+        place-items: center;
+    }
+    
+    .display-med > .sign-up-btn{
+        font-size: 1.3rem;
+        width: 120px;
+        padding: 8px 15px;
+        margin-top: 8px;
+        margin-bottom: 30%;
+    }
+    
+    /* End of head */
+    
+    .display-info{
+        margin: 10px 0;
+        padding: 0 10px;
+        background-color: black;
+        color: white;
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    
+    .display-info > .text{
+        width: 40%;
+        margin: 0 40px;
+    }
+    
+    .display-info > .text > .text-title{
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+    }
+    
+    .display-info > .text > .text-content{
+        font-size: 1.5rem;
+    }
+    
+    .display-info > img{
+        height: 50%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+        filter: brightness(80%);
+    }
 }
 
-.header > .navbar{
-    width: 100vw;
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+/* big screens */
+@media  screen and (min-width:1001px) { 
 
-.login-btn{
-    padding: 8px 18px;
-    font-size: 1.3rem;
-    color: white;
-}
-
-.header > .navbar > .title{
-    font-size: 5rem;
-    color: var(--primary-color);
-}
-
-.display-big{
-    font-size: 6rem;
-    color: white;
-    margin-top: 10%;
-}
-
-.display-small{
-    font-size: 3rem;
-    color: white;
-    margin-bottom: auto;
-}
-
-.display-med{
-    font-size: 2.8rem;
-    color: white;
-    text-align: center;
-    display: grid;
-    place-items: center;
-}
-
-.display-med > .sign-up-btn{
-    font-size: 1.3rem;
-    width: 120px;
-    padding: 8px 15px;
-    margin-top: 8px;
-    margin-bottom: 30%;
-}
-
-/* End of head */
-
-.display-info{
-    margin: 10px 0;
-    background-color: black;
-    color: white;
-    width: 100vw;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.display-info > .text{
-    width: 40%;
-    margin: 0 40px;
-}
-
-.display-info > .text > .text-title{
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-}
-
-.display-info > .text > .text-content{
-    font-size: 1.5rem;
-}
-
-.display-info > img{
-    height: 80%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 5px;
-    filter: brightness(80%);
+    body{
+        background-color: var(--bg-color);
+        font-family: 'Ubuntu', sans-serif;
+        overflow-x: hidden;
+    }
+    
+    .btn{
+        cursor: pointer;
+        background-color: var(--primary-color);
+        border-radius: 5px;
+    }
+    
+    .header{
+        width: 100vw;
+        height: 80vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("./images/wallpaperflare.com_wallpaper.jpg");
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header > .navbar{
+        width: 100vw;
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .login-btn{
+        padding: 8px 18px;
+        font-size: 1.3rem;
+        color: white;
+    }
+    
+    .header > .navbar > .title{
+        font-size: 5rem;
+        color: var(--primary-color);
+    }
+    
+    .display-big{
+        padding: 0 20px;
+        font-size: 6rem;
+        color: white;
+        margin-top: 10%;
+    }
+    
+    .display-small{
+        font-size: 3rem;
+        color: white;
+        margin-bottom: auto;
+    }
+    
+    .display-med{
+        font-size: 2.8rem;
+        color: white;
+        text-align: center;
+        display: grid;
+        place-items: center;
+    }
+    
+    .display-med > .sign-up-btn{
+        font-size: 1.3rem;
+        width: 120px;
+        padding: 8px 15px;
+        margin-top: 8px;
+        margin-bottom: 30%;
+    }
+    
+    /* End of head */
+    
+    .display-info{
+        margin: 10px 0;
+        background-color: black;
+        color: white;
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .display-info > .text{
+        width: 40%;
+        margin: 0 40px;
+    }
+    
+    .display-info > .text > .text-title{
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+    }
+    
+    .display-info > .text > .text-content{
+        font-size: 1.5rem;
+    }
+    
+    .display-info > img{
+        height: 80%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+        filter: brightness(80%);
+    }
 }
