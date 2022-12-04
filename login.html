@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Login and Singup Page</title>
+        <link rel="stylesheet" href="login-style.css">
+
+    </head>
+    <body>
+        <div class ="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+                </div>
+                <!-- <div class="social-icons">
+                    <img src="/images/fb.png">
+                    <img src="/images/tw.png">
+                    <img src="/images/gp.png">
+                </div> -->
+
+                <div id="login" class="input-group">
+
+                    <input type="text" class="input-field" id="login-id" placeholder="User ID" required>
+                    <input type="text" class="input-field" id="login-pass" placeholder="Enter Password" required>
+                    <button class="submit-btn" onclick="tryLogin()">Login</button>
+                    
+                </div>
+
+                <div id="signup" class="input-group">
+
+                    <input type="text" class="input-field" id="signup-id" placeholder="User ID" required>
+                    <input type="email" class="input-field" id="signup-eid" placeholder="Email ID" required>
+                    <input type="text" class="input-field" id="signup-pass" placeholder="Enter Password" required>
+                    <button class="submit-btn" onclick="trySignUp()">Sign up</button>
+
+                </div>
+            </div>   
+        </div>
+        <script src="./login.js"></script>
+    </body>
+</html>

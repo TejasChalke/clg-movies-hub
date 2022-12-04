@@ -53,30 +53,32 @@ function callSV(){
     let data = {}
     switch (fileName){
         case "action1.html":
-            data = {pageNumber: 28}
+            data = {genId: 28}
             break;
         case "animation1.html":
-            data = {pageNumber: 18}
+            data = {genId: 16}
             break;
         case "comedy1.html":
-            data = {pageNumber: 36}
+            data = {genId: 35}
             break;
         case "content1.html":
-            data = {pageNumber: 12}
+            data = {genId: 12}
             break;
         case "horror1.html":
-            data = {pageNumber: 27}
+            data = {genId: 27}
             break;
         default:
-            data = {pageNumber: 12}
+            data = {genId: 12}
             console.log("error in calling server")
             break;
     }
     fetch("https://mymovieshub.vercel.app/searchByGenre", {
         method: 'POST',
-        body: data
+        body: JSON.stringify(data),
+        headers: {
+            "Content-type" : "application/json"
+        }
     }).then(response => {
-        console.log(response)
         return response.json()
     }).then( data => {
         movieData = data.filter((currentValue, index) => {
@@ -105,6 +107,13 @@ function callSV(){
     }).catch(error => {
         console.log(error)
     })
+    document.getElementsByClassName("user-name")[0].innerText = localStorage.getItem("username").toUpperCase()
+    
+}
+
+function logOut(){
+    localStorage.removeItem("username")
+    window.location.href = "./index.html";
 }
 
 function gotoPage(event){
