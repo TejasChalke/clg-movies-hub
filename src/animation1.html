@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./font6/css/all.css">
-    <link rel="stylesheet" href="./content-main.css">
+    <link rel="stylesheet" href="../font6/css/all.css">
+    <link rel="stylesheet" href="./css/content-main.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,800;0,900;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Trispace:wght@400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,800;0,900;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -24,7 +25,7 @@
                 <ul class="menu-items" id="menu-1">
                     <li class="menu-item" onclick="gotoPage(event)">Home</li>
                     <li class="menu-item" onclick="gotoPage(event)">Action</li>
-                    <li class="menu-item" onclick="gotoPage(event)">Animation</li>
+                    <li class="menu-item" onclick="gotoPage(event)" style="color: #ff4b2b">Animation</li>
                     <li class="menu-item" onclick="gotoPage(event)">Comedy</li>
                     <li class="menu-item" onclick="gotoPage(event)">Horror</li>
                     <li class="menu-item" onclick="logOut()">Log Out</li>
@@ -40,7 +41,7 @@
             <i class="fa-solid fa-house" title="Home" onclick="gotoPage(event)"></i>
             <div class="genres">
                 <div class="genre" onclick="gotoPage(event)">Action</div>
-                <div class="genre" onclick="gotoPage(event)">Animation</div>
+                <div class="genre" onclick="gotoPage(event)" style="color: #ff4b2b">Animation</div>
                 <div class="genre" onclick="gotoPage(event)">Comedy</div>
                 <div class="genre" onclick="gotoPage(event)">Horror</div>
             </div>
@@ -60,6 +61,6 @@
         <div class="display-block"></div>
         <div class="display-block"></div>
     </div>
-    <script src="./content1.js"></script>
+    <script src="./js/content1.js"></script>
 </body>
 </html>

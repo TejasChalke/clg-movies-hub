@@ -1,0 +1,108 @@
+:root{
+    --primary-color: #ff4b2b;
+    --bg-color: #2b2b2b;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("../images/login_bg.jpg");
+    background-position:center;
+    background-size:cover;
+    position:absolute;
+}
+
+.form-box{
+    width : 40vw;
+    height : 100vh;
+    position : relative;
+    background: rgb(255, 255, 255);
+    padding: 60px 0;
+    overflow: hidden;
+    border: 2px solid var(--primary-color);
+    border-left: none;
+}
+
+.button-box{
+    width: 100%;
+    margin: 35px 20%;
+    position: relative;
+    border-radius: 30px;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 220px;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.toggle-btn{
+    font-size: 2rem;
+    padding: 10px 60px;
+    cursor: pointer;
+    background : transparent;
+    border : 0;
+    outline : none;
+    position: relative;
+    color: black;
+}
+
+::placeholder{
+    color: black;
+    font-size: 2rem;
+}
+
+.input-group{
+    top:180px;
+    position: absolute;
+    width: 560px;
+    transition: 0.5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 15px 20px;
+    padding-top: 30px;
+    margin : 20px 0;
+    border-left: 0;
+    border-top: 0;
+    font-size: 2rem;
+    border-right: 0;
+    border-bottom: 2px solid black;
+    outline: none;
+    background: transparent;
+}
+
+
+#login{
+    left: 100px;
+}
+#signup{
+    left: 800px;
+}
+
+.submit-btn{
+    width:35%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    font-size: 2rem;
+    margin: 40px auto;
+    background: var(--primary-color);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+

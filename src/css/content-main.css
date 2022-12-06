@@ -9,15 +9,16 @@
     box-sizing: border-box;
 }
 
+.primary{
+    color: var(--primary-color);
+}
+
 .deactive{
     display: none !important;
 }
 
 /* small screens */
 @media screen and (max-width:800px) {
-    .primary{
-        color: var(--primary-color);
-    }
     
     body{
         background-color: black;
@@ -153,10 +154,7 @@
 
 /* medium screens */
 @media screen and (min-width: 801px) {
-    .primary{
-        color: var(--primary-color);
-    }
-    
+   
     body{
         background-color: black;
         font-family: 'Ubuntu', sans-serif;
@@ -179,6 +177,11 @@
     .logo{
         font-size: 3rem;
         font-weight: 700;
+        transition: all 300ms ease;
+    }
+
+    .logo:hover{
+        transform: scale(1.1);
     }
     
     .user{
@@ -248,7 +251,7 @@
         place-items: center;
         row-gap: 10px;
         grid-template-columns: repeat(3, calc(100vw/3));
-        grid-auto-rows: calc(100vh/2);
+        grid-auto-rows: calc(100vh/1.5);
     }
     
     .display-block{
@@ -261,6 +264,10 @@
         border: 2px solid rgb(255, 255, 255);
         background-color: rgb(0, 0, 0);
         overflow: hidden;
+    }
+
+    .display-block:hover{
+        border: 3px solid var(--primary-color);
     }
     
     .movie-info{
@@ -291,10 +298,7 @@
 
 
 /* large screens */
-@media screen and (min-width: 1201px) {
-    .primary{
-        color: var(--primary-color);
-    }
+@media screen and (min-width: 1401px) {
     
     body{
         background-color: black;
@@ -368,6 +372,7 @@
     }
     
     .genres{
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -387,7 +392,7 @@
     .main-content{
         position: relative;
         max-width: 90vw;
-        top: 10vh;
+        top: 12vh;
         left: 8vw;
         display: grid;
         place-items: center;
@@ -406,6 +411,10 @@
         border: 2px solid rgb(255, 255, 255);
         background-color: rgb(0, 0, 0);
         overflow: hidden;
+    }
+
+    .display-block:hover{
+        border: 3px solid var(--primary-color);
     }
     
     .movie-info{

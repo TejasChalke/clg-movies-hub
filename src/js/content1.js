@@ -1,4 +1,4 @@
-const mediaQuerySmall = window.matchMedia('(max-width: 600px)'), mediaQueryMed = window.matchMedia('(max-width: 1200px)'), mediaQueryLarge = window.matchMedia('(min-width: 1201px)')
+const mediaQuerySmall = window.matchMedia('(max-width: 600px)'), mediaQueryMed = window.matchMedia('(max-width: 1400px)'), mediaQueryLarge = window.matchMedia('(min-width: 1401px)')
 let movieData = []
 let mainContainer= document.getElementsByClassName("main-content")[0]
 

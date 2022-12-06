@@ -5,14 +5,14 @@ var signup1 = document.getElementById("signup");
 var btn1 = document.getElementById("btn");
 
 function signup(){
-    login1.style.left="-400px";
-    signup1.style.left="50px";
-    btn1.style.left="110px";
+    login1.style.left="-800px";
+    signup1.style.left="100px";
+    btn1.style.left="220px";
 }
 
 function login(){
-    login1.style.left="50px";
-    signup1.style.left="450px";
+    login1.style.left="100px";
+    signup1.style.left="800px";
     btn1.style.left="0px";
 }
 
@@ -88,7 +88,7 @@ function validEmail(str) {
     var atSymbol = str.indexOf("@");
     if(atSymbol < 1) return false;
 
-    var dot = str.indexOf(".");
+    var dot = str.lastIndexOf(".");
     if(dot <= atSymbol + 2) return false;
 
     if (dot === str.length - 1) return false;
