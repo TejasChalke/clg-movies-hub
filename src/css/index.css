@@ -35,6 +35,8 @@
         width: 100vw;
         height: 100vh;
         background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), var(--bg-image);
+        background-repeat: no-repeat;
+        background-position: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

@@ -13,15 +13,15 @@
 .hero{
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("../images/login_bg.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url("../images/login_bg.webp");
     background-position:center;
     background-size:cover;
     position:absolute;
 }
 
 .form-box{
-    width : 40vw;
-    height : 100vh;
+    width : 100%;
+    height : 100%;
     position : relative;
     background: rgb(255, 255, 255);
     padding: 60px 0;
@@ -32,7 +32,7 @@
 
 .button-box{
     width: 100%;
-    margin: 35px 20%;
+    margin: 0 8%;
     position: relative;
     border-radius: 30px;
 }
@@ -67,8 +67,9 @@
 .input-group{
     top:180px;
     position: absolute;
-    width: 560px;
+    width: 65%;
     transition: 0.5s;
+    margin: 0 auto;
 }
 
 .input-field{
@@ -95,7 +96,7 @@
 
 .submit-btn{
     width:35%;
-    padding: 10px 30px;
+    padding: 10px 10px;
     cursor: pointer;
     display: block;
     font-size: 2rem;
@@ -106,3 +107,75 @@
     border-radius: 30px;
 }
 
+
+@media screen and (min-width: 801px) {
+
+    .toggle-btn{
+        font-size: 2rem;
+        padding: 10px 60px;
+        cursor: pointer;
+        background : transparent;
+        border : 0;
+        outline : none;
+        position: relative;
+        color: black;
+    }
+    
+    ::placeholder{
+        color: black;
+        font-size: 2rem;
+    }
+    
+    .input-group{
+        top:180px;
+        position: absolute;
+        width: 65%;
+        transition: 0.5s;
+        margin: 0 auto;
+    }
+    
+    .input-field{
+        width: 100%;
+        padding: 15px 20px;
+        padding-top: 30px;
+        margin : 20px 0;
+        border-left: 0;
+        border-top: 0;
+        font-size: 2rem;
+        border-right: 0;
+        border-bottom: 2px solid black;
+        outline: none;
+        background: transparent;
+    }
+    
+    .button-box{
+        width: 100%;
+        margin: 0 20%;
+        position: relative;
+        border-radius: 30px;
+    }
+
+    .form-box{
+        width : 800px;
+        height : 100%;
+        position : relative;
+        background: rgb(255, 255, 255);
+        padding: 60px 0;
+        overflow: hidden;
+        border: 2px solid var(--primary-color);
+        border-left: none;
+    }
+
+    .submit-btn{
+        width:35%;
+        padding: 10px 30px;
+        cursor: pointer;
+        display: block;
+        font-size: 2rem;
+        margin: 40px auto;
+        background: var(--primary-color);
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+    }
+}
